@@ -26,7 +26,7 @@ As for the instructions for the Alpaca API, their [github page](https://github.c
 
 ## Setup 👨‍💻
 
-You need to [install](https://github.com/tensorflow/swift/blob/master/Installation.md) a special Swift toolchain made for Swift for TensorFlow that allows you to import the PythonKit and TensorFlow modules and use all of their magic. Additionally you need to add to your path a PYTHO_LIBRARY variable that points to a specific libpython file. The way to specify the environment inside the code like ``` 
+You need to [install](https://github.com/tensorflow/swift/blob/master/Installation.md) a special Swift toolchain made for Swift for TensorFlow that allows you to import the PythonKit and TensorFlow modules and use all of their magic. Additionally you need to add to your path a PYTHON_LIBRARY variable that points to a specific libpython file. The way to specify the environment inside the code like ``` 
 PythonLibrary.useVersion(3, 7)``` mentioned on the TF website did not work for me. For my case it was like so for the path variable:
 
 ```bash
