@@ -18,11 +18,13 @@ def get_ticker_history(ticker=ticker_default):
     # We are converting to numpy because there is no official support for pandas
     ticker_vals_np = ticker_df.to_numpy()
     # After conversion the keys (timestamps) are lost so we can make a new array
+    # to get them separately and later recombine it into one dictionary
     ticker_idx_np = ticker_df.index.to_numpy()
 
     # Initialize the dictionary to contain everything
     stock_dict = {}
 
+    # Here we are recombining the timestamps with the values into one dictionary
     for i in range(len(ticker_idx_np)):
         stock_dict[ticker_idx_np[i]] = ticker_vals_np[i]
 
